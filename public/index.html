@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Gillian Yeomans</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="../temp resources/favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Codystar|Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <nav id="rocket-nav">
+      <img src="../temp resources/navline.svg" alt="" id="navline" />
+      <img
+        src="../temp resources/rocket-svgrepo-com 1.svg"
+        alt=""
+        id="rocket"
+      />
+    </nav>
+    <div id="site-container">
+      <section id="landing">
+        <img
+          src="../temp resources/planet1a.svg"
+          alt=""
+          id="planet1"
+          class="planet"
+        />
+        <img
+          src="../temp resources/planet2.svg"
+          alt=""
+          id="planet2"
+          class="planet"
+        />
+        <img
+          src="../temp resources/planet3.svg"
+          alt=""
+          id="planet3"
+          class="planet"
+        />
+        <img
+          src="../temp resources/planet4.svg"
+          alt=""
+          id="planet4"
+          class="planet"
+        />
+        <h1>
+          Gillian<br />
+          Yeomans
+        </h1>
+      </section>
+      <section id="bio">
+        <aside>
+          <p>Bio Length:</p>
+          <input
+            type="radio"
+            name="bio-length"
+            value="short"
+            id="bio-radio-short"
+          /><label for="bio-radio-short">Short</label>
+          <input type="radio" name="bio-length" value="medium" checked /><label
+            for="bio-radio-medium"
+            >Medium</label
+          >
+          <input type="radio" name="bio-length" value="long" />
+          <label for="bio-radio-long">Long</label>
+        </aside>
+        <div>
+          <h2>Hi there, nice to meet you</h2>
+          <p id="bio-text">This is a medium bio</p>
+        </div>
+      </section>
+      <section id="projects">
+        <p>PROJECTS</p>
+        <div id="project-gallery">
+          <div id="project-gallery-upper" class="project-gallery-row">
+            <figure>
+              <figcaption class="project-title">To-do List</figcaption>
+              <figcaption class="project-description">
+                A to-do list project built using TDD. To-do items can be added,
+                edited, deleted, and marked as done.
+              </figcaption>
+              <img
+                class="project-image"
+                src="../temp resources/week2.png"
+                alt="my project"
+              />
+            </figure>
+            <figure>
+              <figcaption class="project-title">Quiz</figcaption>
+              <figcaption class="project-description">
+                A general knowledge quiz that gives you happy gifs for right
+                answers and insults for wrong ones
+              </figcaption>
+              <img
+                class="project-image"
+                src="../temp resources/week3.png"
+                alt="my project"
+              />
+            </figure>
+          </div>
+          <div id="project-gallery-lower" class="project-gallery-row">
+            <figure>
+              <figcaption class="project-title">Autocomplete</figcaption>
+              <figcaption class="project-description">
+                Search our list of footballers and birds with a handy
+                autocomplete, then see its Wikipedia page
+              </figcaption>
+              <img
+                class="project-image"
+                src="../temp resources/week4.png"
+                alt="my project"
+              />
+            </figure>
+            <figure>
+              <figcaption class="project-title">
+                Cryptocurrency Converter
+              </figcaption>
+              <figcaption class="project-description">
+                Check real-time values of popular cryptocurrencies against
+                several major world currencies
+              </figcaption>
+              <img
+                class="project-image"
+                src="../temp resources/week5.png"
+                alt="my project"
+              />
+            </figure>
+          </div>
+        </div>
+      </section>
+      <section id="skills">
+        <div class="planet-container">
+          <img
+            src="../temp resources/planet2.svg"
+            alt=""
+            id="planet5"
+            class="planet"
+          />
+        </div>
+        <h3>I have experience with...</h3>
+        <table class="skills-table">
+          <tr class="table-header">
+            <th>Front End</th>
+            <th>Back End</th>
+            <th>Databases</th>
+          </tr>
+          <tr>
+            <td>HTML</td>
+            <td>Node.js</td>
+            <td>PostgreSQL</td>
+          </tr>
+          <tr>
+            <td>CSS</td>
+          </tr>
+          <tr>
+            <td>Javascript</td>
+          </tr>
+        </table>
+
+        <table class="skills-table">
+          <tr class="table-header">
+            <th>Testing</th>
+            <th>Tools?</th>
+            <th>Design</th>
+          </tr>
+          <tr>
+            <td>Tape</td>
+            <td>Github</td>
+            <td>Figma</td>
+          </tr>
+          <tr>
+            <td>Codecov</td>
+            <td>Travis</td>
+          </tr>
+          <tr>
+            <td>Supertest</td>
+          </tr>
+        </table>
+      </section>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

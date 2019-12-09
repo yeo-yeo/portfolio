@@ -1,0 +1,242 @@
+/* Generic settings */
+
+html {
+  color: #ffffff;
+}
+
+#site-container {
+  min-width: 400vw;
+  overflow: scroll;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+
+h1 {
+  font-family: "Codystar", cursive;
+  font-size: 6rem;
+  font-weight: normal;
+  letter-spacing: 10px;
+}
+
+h2,
+h3,
+h4,
+p,
+table,
+figcaption,
+label {
+  font-family: "Open Sans", sans-serif;
+}
+
+section {
+  display: flex;
+}
+
+/* Rocket nav bar */
+
+#rocket-nav {
+  position: fixed;
+  left: 20vw;
+  bottom: 60px;
+  width: 60vw;
+  z-index: 99;
+}
+
+#navline {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index: 98;
+}
+
+#rocket {
+  z-index: 99;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: -80px;
+  transform-box: fill-box;
+  transform-origin: center;
+  width: 157px;
+  height: 157px;
+}
+
+/* Landing Section */
+
+#landing {
+  height: 100vh;
+  width: 100vw;
+  background: linear-gradient(
+    90deg,
+    rgba(30, 26, 52, 1) 0%,
+    rgba(5, 2, 62, 1) 34%,
+    rgba(28, 9, 91, 1) 100%
+  );
+  justify-content: center;
+  align-items: center;
+}
+
+.planet {
+  position: absolute;
+}
+
+#planet1 {
+  width: 250px;
+  height: 250px;
+  left: 100px;
+  top: 50px;
+}
+
+#planet2 {
+  width: 200px;
+  height: 200px;
+  right: 50px;
+  bottom: 150px;
+}
+
+#planet3 {
+  width: 100px;
+  height: 100px;
+  left: 75px;
+  top: 175px;
+}
+
+#planet4 {
+  width: 350px;
+  height: 350px;
+  left: -100px;
+  bottom: -100px;
+}
+
+/* Bio section */
+
+#bio {
+  background: linear-gradient(
+    90deg,
+    rgba(28, 9, 91, 1) 0%,
+    rgba(5, 2, 62, 1) 37%,
+    rgba(30, 26, 52, 1) 100%
+  );
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#bio aside {
+  display: flex;
+  flex-direction: row;
+}
+
+input[type="radio"] {
+  margin-right: 0.2rem;
+}
+
+input {
+  margin-left: 1rem;
+}
+
+/* Projects Section */
+
+#projects {
+  width: 100vw;
+  background: linear-gradient(
+    90deg,
+    rgba(30, 26, 52, 1) 0%,
+    rgba(5, 2, 62, 1) 34%,
+    rgba(28, 9, 91, 1) 100%
+  );
+  display: flex;
+  flex-direction: column;
+}
+
+#project-gallery {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-gallery-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.project-title {
+  padding-bottom: 8px;
+}
+
+#project-gallery figure {
+  width: 350px;
+  margin: 32px 128px;
+  position: relative;
+}
+
+.project-description {
+  display: none;
+  transition: 0.3s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0%, -40%);
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Skills Section */
+
+#skills {
+  display: relative;
+  background: linear-gradient(
+    90deg,
+    rgba(28, 9, 91, 1) 0%,
+    rgba(5, 2, 62, 1) 37%,
+    rgba(30, 26, 52, 1) 100%
+  );
+  flex-direction: column;
+  padding: 4rem 0 0 16rem;
+  width: 100vw;
+}
+
+.skills-table {
+  width: 1000px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: rgba(5, 2, 62, 1);
+  margin: 4rem 2rem 0 2rem;
+  z-index: 99;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 8px;
+}
+
+th {
+  border-bottom: 1px solid rgba(5, 2, 62, 1);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+.table-header {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.planet-container {
+  position: absolute;
+  width: 350px;
+}
+
+#planet5 {
+  width: 350px;
+  height: 350px;
+}
