@@ -125,7 +125,7 @@ function stars() {
   Array.from(sections).forEach(section => {
     for (let i = 0; i < 30; i++) {
       let newStar = document.createElement("img");
-      newStar.src = "../temp resources/star.svg";
+      newStar.src = "./temp resources/star.svg";
       newStar.classList.add("star");
       newStar.style.top = Math.random() * window.innerHeight + "px";
       newStar.style.left = Math.random() * window.innerWidth + "px";
