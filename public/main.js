@@ -38,24 +38,22 @@ function rocketFly() {
 
 // Make the element draggable:
 dragElement(rocket);
-function dragElement(elmnt) {
-  var pos1 = 0,
-    pos2 = 0,
-    pos3 = 0,
-    pos4 = 0;
-  if (document.getElementById(elmnt.id + "header")) {
+function dragElement(element) {
+  let newPositionX = 0;
+  let initialPositionX = 0;
+  if (document.getElementById(element.id + "header")) {
     // if present, the header is where you move the DIV from:
-    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+    document.getElementById(element.id + "header").onmousedown = dragMouseDown;
   } else {
     // otherwise, move the DIV from anywhere inside the DIV:
-    elmnt.onmousedown = dragMouseDown;
+    element.onmousedown = dragMouseDown;
   }
 
   function dragMouseDown(e) {
     e = e || window.event;
     e.preventDefault();
     // get the mouse cursor position at startup:
-    pos3 = e.clientX;
+    initialPositionX = e.clientX;
     document.onmouseup = closeDragElement;
     // call a function whenever the cursor moves:
     document.onmousemove = elementDrag;
@@ -65,10 +63,42 @@ function dragElement(elmnt) {
     e = e || window.event;
     e.preventDefault();
     // calculate the new cursor position:
-    pos1 = pos3 - e.clientX;
-    pos3 = e.clientX;
+    newPositionX = initialPositionX - e.clientX;
+    console.log(initialPositionX, e.clientX);
+    initialPositionX = e.clientX;
+
+    const maxLeftPos = document
+      .getElementById("navline")
+      .getBoundingClientRect().left;
+    const maxRightPos = document
+      .getElementById("navline")
+      .getBoundingClientRect().right;
+
+    const rocketDragPosition = element.offsetLeft - newPositionX;
+    // console.log(element.offsetLeft, newPositionX);
+
+    const boundedRocketPosition = Math.max(
+      maxLeftPos,
+      Math.min(rocketDragPosition, maxRightPos)
+    );
+
     // set the element's new position:
-    elmnt.style.left = elmnt.offsetLeft - pos1 + "px";
+    element.style.left = boundedRocketPosition + "px";
+
+    /*
+    leftEndOfNavLine e.g. 100
+    rightEndOfNavLine e.g. 400
+rocket position
+
+Math.Max(leftEndOfNavLine,Math.Min(rocket position,rightEndOfNavline))
+
+e.g.
+rocket pos 80: leftEndOfNavline - correct
+rocket pos 200: rocketPosition - correct
+rocket pos 500: rightEndOfNavLine - correct
+
+
+*/
 
     //add some more stuff here so page scrolls when you drag the rocket
     //also need to stop it from going over edge of navline
@@ -81,7 +111,7 @@ function dragElement(elmnt) {
   }
 }
 
-//for project gallery: descriptions show on hover
+//for project gallery: descriptions show on hover and link to github on click
 const projectImages = document.getElementsByClassName("project-image");
 const projectDescriptions = document.getElementsByClassName(
   "project-description"
@@ -97,7 +127,17 @@ Array.from(projectImages).forEach((image, index) => {
     projectDescriptions[index].style.opacity = "0";
     projectDescriptions[index].style.display = "none";
   });
+  image.addEventListener("click", () => {
+    window.location = projectLinks[index];
+  });
 });
+
+const projectLinks = {
+  0: "https://github.com/fac18/week2-ajnp-sbs-todolist",
+  1: "https://github.com/fac18/week3-ABEH-trialbytrivia",
+  2: "https://github.com/fac18/week4-ABEH-autocomplete",
+  3: "https://github.com/fac18/week5-famk-backend-api"
+};
 
 //change bio when radio buttons clicked
 Array.from(document.getElementsByName("bio-length")).forEach(button => {
