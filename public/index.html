@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaQueries.css" />
     <link rel="icon" type="image/png" href="../temp resources/favicon.png" />
     <link
       href="https://fonts.googleapis.com/css?family=Codystar|Open+Sans&display=swap"
@@ -56,28 +57,39 @@
         </h1>
       </section>
       <section id="bio">
-        <aside>
-          <p>Bio Length:</p>
-          <input
-            type="radio"
-            name="bio-length"
-            value="short"
-            id="bio-radio-short"
-          /><label for="bio-radio-short">Short</label>
-          <input type="radio" name="bio-length" value="medium" checked /><label
-            for="bio-radio-medium"
-            >Medium</label
-          >
-          <input type="radio" name="bio-length" value="long" />
-          <label for="bio-radio-long">Long</label>
-        </aside>
-        <div>
-          <h2>Hi there, nice to meet you</h2>
-          <p id="bio-text">This is a medium bio</p>
+        <div id="bio-header">
+          <h2>Hi there, nice to meet you!</h2>
+          <aside>
+            <p>Bio Length:</p>
+            <label for="bio-radio-short"
+              ><input
+                type="radio"
+                name="bio-length"
+                value="short"
+                id="bio-radio-short"
+              />Short</label
+            >
+            <label for="bio-radio-medium"
+              ><input
+                type="radio"
+                name="bio-length"
+                value="medium"
+                checked
+              />Medium</label
+            >
+            <label for="bio-radio-long"
+              ><input type="radio" name="bio-length" value="long" />Long</label
+            >
+          </aside>
         </div>
+        <p id="bio-text">
+          A medium length bio about me. This will be the default. Not too much
+          information, not too little. Who I am, what I've done in my life, why
+          I want to be a developer. Open source, workshops
+        </p>
       </section>
       <section id="projects">
-        <p>PROJECTS</p>
+        <h2>Some Projects I've Worked On</h2>
         <div id="project-gallery">
           <div id="project-gallery-upper" class="project-gallery-row">
             <figure>
@@ -136,14 +148,6 @@
         </div>
       </section>
       <section id="skills">
-        <div class="planet-container">
-          <img
-            src="../temp resources/planet2.svg"
-            alt=""
-            id="planet5"
-            class="planet"
-          />
-        </div>
         <h3>I have experience with...</h3>
         <table class="skills-table">
           <tr class="table-header">
@@ -167,7 +171,7 @@
         <table class="skills-table">
           <tr class="table-header">
             <th>Testing</th>
-            <th>Tools?</th>
+            <th>Tools</th>
             <th>Design</th>
           </tr>
           <tr>
@@ -183,6 +187,9 @@
             <td>Supertest</td>
           </tr>
         </table>
+      </section>
+      <section id="contact">
+        <h2>Get in touch</h2>
       </section>
     </div>
     <script src="main.js"></script>
