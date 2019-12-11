@@ -54,6 +54,7 @@ function dragElement(element) {
     e.preventDefault();
     // get the mouse cursor position at startup:
     initialPositionX = e.clientX;
+
     document.onmouseup = closeDragElement;
     // call a function whenever the cursor moves:
     document.onmousemove = elementDrag;
@@ -63,45 +64,35 @@ function dragElement(element) {
     e = e || window.event;
     e.preventDefault();
     // calculate the new cursor position:
-    newPositionX = initialPositionX - e.clientX;
-    console.log(initialPositionX, e.clientX);
+    newPositionX = e.clientX - 200;
+
     initialPositionX = e.clientX;
 
-    const maxLeftPos = document
-      .getElementById("navline")
-      .getBoundingClientRect().left;
-    const maxRightPos = document
-      .getElementById("navline")
-      .getBoundingClientRect().right;
+    const maxLeftPos = 0 - rocket.width / 2;
 
-    const rocketDragPosition = element.offsetLeft - newPositionX;
-    // console.log(element.offsetLeft, newPositionX);
+    const maxRightPos =
+      document.getElementById("navline").width - rocket.width / 2;
+
+    const rocketDragPosition = newPositionX - rocket.width / 2;
 
     const boundedRocketPosition = Math.max(
       maxLeftPos,
       Math.min(rocketDragPosition, maxRightPos)
     );
+    // console.log(maxLeftPos, rocketDragPosition, maxRightPos);
 
     // set the element's new position:
     element.style.left = boundedRocketPosition + "px";
 
-    /*
-    leftEndOfNavLine e.g. 100
-    rightEndOfNavLine e.g. 400
-rocket position
+    // const siteWidth =
+    //   document.documentElement.scrollWidth -
+    //   document.documentElement.clientWidth;
 
-Math.Max(leftEndOfNavLine,Math.Min(rocket position,rightEndOfNavline))
+    // const navRange = maxRightPos - maxLeftPos;
 
-e.g.
-rocket pos 80: leftEndOfNavline - correct
-rocket pos 200: rocketPosition - correct
-rocket pos 500: rightEndOfNavLine - correct
-
-
-*/
-
-    //add some more stuff here so page scrolls when you drag the rocket
-    //also need to stop it from going over edge of navline
+    // document.documentElement.scrollLeft =
+    //   ((boundedRocketPosition + rocket.width / 2) / navRange) * siteWidth;
+    // console.log(((boundedRocketPosition + rocket.width / 2) / navRange) * 100);
   }
 
   function closeDragElement() {
