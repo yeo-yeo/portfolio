@@ -1,107 +1,3 @@
-window.addEventListener("wheel", horizontalScroll, { passive: false });
-window.addEventListener("scroll", rocketFly);
-
-function horizontalScroll(event) {
-  //see note here about safari vs other browsers RE where scrolling happens
-  //https://www.w3schools.com/jsref/prop_element_scrollleft.asp
-  if (window.innerWidth > 1000) {
-    event.preventDefault();
-    document.documentElement.scrollLeft += event.deltaY;
-    document.documentElement.scrollLeft += event.deltaX;
-  }
-}
-
-//move rocket when scrolling
-let rocketPosition = 0;
-const rocket = document.getElementById("rocket");
-
-function rocketFly() {
-  const windowScroll = document.documentElement.scrollLeft;
-  const width =
-    document.documentElement.scrollWidth - document.documentElement.clientWidth;
-  const scrolled = windowScroll / width;
-  const navBarWidth = document.getElementById("navline").width;
-  let pixelsToMove = scrolled * navBarWidth;
-
-  //check if rocket is moving in different direction, flip if so, then move
-  if (pixelsToMove < rocketPosition) {
-    const rotatedPixelsToMove = pixelsToMove * -1;
-    rocket.style.transform =
-      "rotate(180deg) translateX(" + rotatedPixelsToMove + "px)";
-  } else {
-    rocket.style.transform = "rotate(0deg) translateX(" + pixelsToMove + "px)";
-  }
-
-  //reset rocketPosition for next movement
-  rocketPosition = pixelsToMove;
-}
-
-// Make the element draggable:
-dragElement(rocket);
-function dragElement(element) {
-  let newPositionX = 0;
-  let initialPositionX = 0;
-  if (document.getElementById(element.id + "header")) {
-    // if present, the header is where you move the DIV from:
-    document.getElementById(element.id + "header").onmousedown = dragMouseDown;
-  } else {
-    // otherwise, move the DIV from anywhere inside the DIV:
-    element.onmousedown = dragMouseDown;
-  }
-
-  function dragMouseDown(e) {
-    e = e || window.event;
-    e.preventDefault();
-    // get the mouse cursor position at startup:
-    initialPositionX = e.clientX;
-
-    document.onmouseup = closeDragElement;
-    // call a function whenever the cursor moves:
-    document.onmousemove = elementDrag;
-  }
-
-  function elementDrag(e) {
-    e = e || window.event;
-    e.preventDefault();
-    // calculate the new cursor position:
-    newPositionX = e.clientX - 200;
-
-    initialPositionX = e.clientX;
-
-    const maxLeftPos = 0 - rocket.width / 2;
-
-    const maxRightPos =
-      document.getElementById("navline").width - rocket.width / 2;
-
-    const rocketDragPosition = newPositionX - rocket.width / 2;
-
-    const boundedRocketPosition = Math.max(
-      maxLeftPos,
-      Math.min(rocketDragPosition, maxRightPos)
-    );
-    // console.log(maxLeftPos, rocketDragPosition, maxRightPos);
-
-    // set the element's new position:
-    element.style.left = boundedRocketPosition + "px";
-
-    // const siteWidth =
-    //   document.documentElement.scrollWidth -
-    //   document.documentElement.clientWidth;
-
-    // const navRange = maxRightPos - maxLeftPos;
-
-    // document.documentElement.scrollLeft =
-    //   ((boundedRocketPosition + rocket.width / 2) / navRange) * siteWidth;
-    // console.log(((boundedRocketPosition + rocket.width / 2) / navRange) * 100);
-  }
-
-  function closeDragElement() {
-    // stop moving when mouse button is released:
-    document.onmouseup = null;
-    document.onmousemove = null;
-  }
-}
-
 //for project gallery: descriptions show on hover and link to github on click
 const projectImages = document.getElementsByClassName("project-image");
 const projectDescriptions = document.getElementsByClassName(
@@ -130,6 +26,13 @@ const projectLinks = {
   3: "https://github.com/fac18/week5-famk-backend-api"
 };
 
+//load default bio
+window.addEventListener("load", defaultBio);
+
+function defaultBio() {
+  document.getElementById("bio-text").innerHTML = bios["medium"];
+}
+
 //change bio when radio buttons clicked
 Array.from(document.getElementsByName("bio-length")).forEach(button => {
   button.addEventListener("click", radioClick);
@@ -137,17 +40,18 @@ Array.from(document.getElementsByName("bio-length")).forEach(button => {
 
 function radioClick(event) {
   if (event.target.checked) {
-    document.getElementById("bio-text").textContent = bios[event.target.value];
+    console.log(event.target.value);
+    document.getElementById("bio-text").innerHTML = bios[event.target.value];
   }
 }
 
-bios = {
+const bios = {
   short:
-    "A shorter bio about me.  TL;DR.  Who I am, what I've done in my life, why I want to be a developer.",
+    "<p>I'm Gillian, a recent graduate of the <a href='https://www.foundersandcoders.com/'>Founders and Coders</a> full-stack bootcamp.  I'm looking for full-stack/back-end developer opportunities.</p><p>Previously, I spent 4 years in finance and 2 years teaching English.</p><p>I'm looking forward to honing my development skills in a team environment, while bringing my previously developed skills to the table too.</p>",
   medium:
-    "A medium length bio about me.  This will be the default.  Not too much information, not too little.  Who I am, what I've done in my life, why I want to be a developer.",
+    "<p>I'm Gillian, a recent graduate of the <a href='https://www.foundersandcoders.com/'>Founders and Coders</a> full-stack bootcamp.  I'm currently looking for full-stack or back-end developer opportunities.</p><p>Before moving into tech, I spent 4 years in finance in London and Bermuda and 2 years teaching English in sunny Rome.</p><p>I have a First Class degree from the University of Edinburgh in English Literature and Latin</p><p>I'm looking forward to honing my development skills in a team environment, while bringing my previously developed skills to the table too.</p>",
   long:
-    "A longer bio about me.  More background and details.  Who I am, what I've done in my life, why I want to be a developer."
+    "<p>I'm Gillian, a recent graduate of the <a href='https://www.foundersandcoders.com/'>Founders and Coders</a> full-stack bootcamp.  I'm currently looking for full-stack or back-end developer opportunities.</p><p>Before moving into tech, I spent 4 years in finance in London and Bermuda and 2 years teaching English in sunny Rome.  While working in finance I did a lot of large-scale spreadsheet modelling which was a sort of introduction to coding.  It gave me a lot of insight into how business processes and technology are integrated, and how in traditional industries there is room for improvement.</p><p>I have a First Class degree from the University of Edinburgh in English Literature and Latin.  While it might not be the 100% traditional background for a developer, I think the literary and linguistic analsysis, and rigorous application of grammar and syntax in Latin are actually a perfect preparation for programming.</p><p>I'm looking forward to honing my development skills in a team environment, while bringing my previously developed skills to the table too.</p>"
 };
 
 //function to autogenerate stars for each section

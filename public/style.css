@@ -1,3 +1,15 @@
+/* Variables */
+/* spacing variables: golden ratio */
+:root {
+  --space-xs: 0.382rem;
+  --space-s: 0.618rem;
+  --space-sm: 0.78rem; /* added manually */
+  --space-m: 1rem;
+  --space-l: 1.618rem;
+  --space-xl: 2.618rem;
+  --space-xxl: 4.236rem;
+}
+
 /* Generic settings */
 
 html {
@@ -139,11 +151,11 @@ section {
 }
 
 #bio-header {
-  margin-top: 2rem;
+  margin-top: var(--space-l);
 }
 
 #bio-header h2 {
-  font-size: 2rem;
+  font-size: var(--space-l);
 }
 
 #bio aside {
@@ -166,6 +178,16 @@ input {
 #bio-text {
   margin: auto 0;
   padding: 0 16rem 4rem 16rem;
+}
+
+#bio-text p {
+  margin-bottom: 0.4rem;
+}
+
+#bio-text a:link,
+#bio-text a:visited {
+  color: #ffffff;
+  /* text-decoration: none; */
 }
 
 /* Projects Section */
