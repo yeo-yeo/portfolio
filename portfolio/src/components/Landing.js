@@ -1,4 +1,5 @@
 import React from "react";
+import "./Landing.css";
 
 function Landing() {
   return (
@@ -7,25 +8,25 @@ function Landing() {
         src={require("../assets/planet1a.svg")}
         alt=""
         id="planet1"
-        class="planet"
+        className="planet"
       />
       <img
         src={require("../assets/planet2.svg")}
         alt=""
         id="planet2"
-        class="planet"
+        className="planet"
       />
       <img
         src={require("../assets/planet3.svg")}
         alt=""
         id="planet3"
-        class="planet"
+        className="planet"
       />
       <img
         src={require("../assets/planet4.svg")}
         alt=""
         id="planet4"
-        class="planet"
+        className="planet"
       />
       <h1>
         Gillian

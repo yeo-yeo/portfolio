@@ -1,0 +1,50 @@
+/* Skills Section */
+
+#skills {
+  display: relative;
+  background: linear-gradient(
+    90deg,
+    rgba(28, 9, 91, 1) 0%,
+    rgba(5, 2, 62, 1) 37%,
+    rgba(30, 26, 52, 1) 100%
+  );
+  flex-direction: column;
+  padding-top: 4rem;
+}
+
+.skills-table {
+  width: 75%;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: rgba(5, 2, 62, 1);
+  margin: 4rem auto;
+  z-index: 99;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 8px;
+}
+
+th {
+  border-bottom: 1px solid rgba(5, 2, 62, 1);
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+.table-header {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.planet-container {
+  position: absolute;
+  width: 350px;
+}
+
+#planet5 {
+  width: 350px;
+  height: 350px;
+}

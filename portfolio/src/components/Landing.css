@@ -1,0 +1,53 @@
+/* Landing Section */
+
+#landing {
+  background: linear-gradient(
+    90deg,
+    rgba(30, 26, 52, 1) 0%,
+    rgba(5, 2, 62, 1) 34%,
+    rgba(28, 9, 91, 1) 100%
+  );
+  justify-content: center;
+  align-items: center;
+}
+
+.planet {
+  position: absolute;
+  overflow: hidden;
+  z-index: 90;
+}
+
+#planet1 {
+  width: 250px;
+  height: 250px;
+  left: 100px;
+  top: 50px;
+}
+
+#planet2 {
+  width: 200px;
+  height: 200px;
+  right: 50px;
+  bottom: 150px;
+}
+
+#planet3 {
+  width: 100px;
+  height: 100px;
+  left: 75px;
+  top: 175px;
+}
+
+#planet4 {
+  width: 350px;
+  height: 350px;
+  left: -100px;
+  bottom: -100px;
+}
+
+.star {
+  position: absolute;
+  height: 2px;
+  width: 2px;
+  z-index: 1;
+}

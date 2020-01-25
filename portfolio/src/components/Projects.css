@@ -1,0 +1,58 @@
+/* Projects Section */
+
+#projects {
+  background: linear-gradient(
+    90deg,
+    rgba(30, 26, 52, 1) 0%,
+    rgba(5, 2, 62, 1) 34%,
+    rgba(28, 9, 91, 1) 100%
+  );
+  display: flex;
+  flex-direction: column;
+}
+
+#projects h2 {
+  margin-top: 2rem;
+}
+
+#project-gallery {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-gallery-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.project-title {
+  padding-bottom: 8px;
+}
+
+#project-gallery figure {
+  width: 350px;
+  margin: 32px 32px;
+  position: relative;
+  z-index: 2;
+}
+
+.project-description {
+  display: none;
+  transition: 0.3s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0%, -40%);
+  text-align: center;
+  padding: 1rem;
+}
+
+.project-image {
+  border-radius: 8%;
+}
+
+.project-image:hover {
+  cursor: pointer;
+}

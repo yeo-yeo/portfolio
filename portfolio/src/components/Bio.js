@@ -1,4 +1,5 @@
 import React from "react";
+import "./Bio.css";
 
 function Bio() {
   return (
@@ -7,7 +8,7 @@ function Bio() {
         <h2>Hi there, nice to meet you!</h2>
         <aside>
           <p>Bio Length:</p>
-          <label for="bio-radio-short">
+          <label htmlFor="bio-radio-short">
             <input
               type="radio"
               name="bio-length"
@@ -16,7 +17,7 @@ function Bio() {
             />
             Short
           </label>
-          <label for="bio-radio-medium">
+          <label htmlFor="bio-radio-medium">
             <input
               type="radio"
               name="bio-length"
@@ -26,7 +27,7 @@ function Bio() {
             />
             Medium
           </label>
-          <label for="bio-radio-long">
+          <label htmlFor="bio-radio-long">
             <input
               type="radio"
               name="bio-length"

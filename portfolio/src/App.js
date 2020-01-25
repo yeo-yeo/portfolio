@@ -2,31 +2,38 @@ import React from "react";
 import "./style.css";
 import "./reset.css";
 import "./mediaQueries.css";
+import Nav from "./components/Nav";
 import Landing from "./components/Landing";
 import Bio from "./components/Bio";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 
+//import font awesome icons and add to library
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faDesktop,
+  faServer,
+  faDatabase,
+  faTools,
+  faVial,
+  faRulerCombined
+} from "@fortawesome/free-solid-svg-icons";
+library.add(faDesktop, faServer, faDatabase, faTools, faVial, faRulerCombined);
+
 function App() {
   return (
-    <body>
-      <nav id="rocket-nav">
-        <img src={require("./assets/navline.svg")} alt="" id="navline" />
-        <img
-          src={require("./assets/rocket-svgrepo-com 1.svg")}
-          alt=""
-          id="rocket"
-        />
-      </nav>
+    <>
+      <Nav />
       <div id="site-container">
         <img
           src={require("./assets/satellite-svgrepo-com.svg")}
-          class="satellite"
+          className="satellite"
         />
         <img
           src={require("./assets/satellite-svgrepo-com.svg")}
-          class="satellite"
+          className="satellite"
         />
         <Landing />
         <Bio />
@@ -36,7 +43,7 @@ function App() {
       </div>
       <script src="./main.js"></script>
       <script src="./scrolling.js"></script>
-    </body>
+    </>
   );
 }
 
