@@ -48,6 +48,37 @@ section {
   position: relative;
 }
 
+.satellite {
+  height: 40px;
+  position: absolute;
+  left: -20vw;
+  z-index: 9999;
+  animation-name: satellite-travel;
+  animation-duration: 90s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+}
+
+.satellite:nth-of-type(1) {
+  top: 30vh;
+}
+
+.satellite:nth-of-type(2) {
+  top: 80vh;
+  animation-delay: 40s;
+}
+
+@keyframes satellite-travel {
+  0% {
+    left: -20vw;
+  }
+
+  100% {
+    left: 500vw;
+  }
+}
+
 /* Rocket nav bar */
 
 #rocket-nav {
@@ -224,7 +255,7 @@ input {
 
 #project-gallery figure {
   width: 350px;
-  margin: 32px 128px;
+  margin: 32px 32px;
   position: relative;
   z-index: 2;
 }
@@ -239,6 +270,10 @@ input {
   transform: translate(0%, -40%);
   text-align: center;
   padding: 1rem;
+}
+
+.project-image {
+  border-radius: 8%;
 }
 
 .project-image:hover {

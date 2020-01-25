@@ -14,6 +14,10 @@
       href="https://fonts.googleapis.com/css?family=Codystar|Open+Sans&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/3e24d91489.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
@@ -22,6 +26,8 @@
       <img src="./temp resources/rocket-svgrepo-com 1.svg" alt="" id="rocket" />
     </nav>
     <div id="site-container">
+      <img src="./temp resources/satellite-svgrepo-com.svg" class="satellite" />
+      <img src="./temp resources/satellite-svgrepo-com.svg" class="satellite" />
       <section id="landing">
         <img
           src="./temp resources/planet1a.svg"
@@ -91,7 +97,6 @@
         <div id="project-gallery">
           <div id="project-gallery-upper" class="project-gallery-row">
             <figure>
-              <figcaption class="project-title">To-do List</figcaption>
               <figcaption class="project-description">
                 A to-do list project built using TDD. To-do items can be added,
                 edited, deleted, and marked as done.
@@ -103,7 +108,6 @@
               />
             </figure>
             <figure>
-              <figcaption class="project-title">Quiz</figcaption>
               <figcaption class="project-description">
                 A general knowledge quiz that gives you happy gifs for right
                 answers and insults for wrong ones
@@ -114,10 +118,7 @@
                 alt="my project"
               />
             </figure>
-          </div>
-          <div id="project-gallery-lower" class="project-gallery-row">
             <figure>
-              <figcaption class="project-title">Autocomplete</figcaption>
               <figcaption class="project-description">
                 Search our list of footballers and birds with a handy
                 autocomplete, then see its Wikipedia page
@@ -128,10 +129,20 @@
                 alt="my project"
               />
             </figure>
+          </div>
+          <div id="project-gallery-lower" class="project-gallery-row">
             <figure>
-              <figcaption class="project-title">
-                Cryptocurrency Converter
+              <figcaption class="project-description">
+                A project using databases, user profiles and authentication with
+                a view of being developed into a game
               </figcaption>
+              <img
+                class="project-image"
+                src="./temp resources/week7.png"
+                alt="my project"
+              />
+            </figure>
+            <figure>
               <figcaption class="project-description">
                 Check real-time values of popular cryptocurrencies against
                 several major world currencies
@@ -142,6 +153,16 @@
                 alt="my project"
               />
             </figure>
+            <figure>
+              <figcaption class="project-description">
+                A fun yearbook for cohort 18 of the Founders and Coders course
+              </figcaption>
+              <img
+                class="project-image"
+                src="./temp resources/week8.png"
+                alt="my project"
+              />
+            </figure>
           </div>
         </div>
       </section>
@@ -149,9 +170,9 @@
         <h3>I have experience with...</h3>
         <table class="skills-table">
           <tr class="table-header">
-            <th>Front End</th>
-            <th>Back End</th>
-            <th>Databases</th>
+            <th><i class="fas fa-desktop"></i> Front End</th>
+            <th><i class="fas fa-server"></i> Back End</th>
+            <th><i class="fas fa-database"></i> Databases</th>
           </tr>
           <tr>
             <td>HTML</td>
@@ -168,9 +189,9 @@
 
         <table class="skills-table">
           <tr class="table-header">
-            <th>Testing</th>
-            <th>Tools</th>
-            <th>Design</th>
+            <th><i class="fas fa-vial"></i> Testing</th>
+            <th><i class="fas fa-tools"></i> Tools</th>
+            <th><i class="fas fa-ruler-combined"></i> Design</th>
           </tr>
           <tr>
             <td>Tape</td>
@@ -188,7 +209,8 @@
       </section>
       <section id="contact">
         <h2>Get in touch</h2>
-        Email Github LinkedIn
+
+        Form with recaptcha?? Instead of email? Email Github LinkedIn Twitter
       </section>
     </div>
     <script src="./public/main.js"></script>
