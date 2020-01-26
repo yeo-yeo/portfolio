@@ -2,6 +2,35 @@ import React from "react";
 import "./Projects.css";
 
 function Projects() {
+  React.useEffect(() => {
+    const projectImages = document.getElementsByClassName("project-image");
+    const projectDescriptions = document.getElementsByClassName(
+      "project-description"
+    );
+    Array.from(projectImages).forEach((image, index) => {
+      image.addEventListener("mouseenter", () => {
+        image.style.opacity = "0.25";
+        projectDescriptions[index].style.opacity = "1";
+        projectDescriptions[index].style.display = "block";
+      });
+      image.addEventListener("mouseleave", () => {
+        image.style.opacity = "1";
+        projectDescriptions[index].style.opacity = "0";
+        projectDescriptions[index].style.display = "none";
+      });
+      image.addEventListener("click", () => {
+        window.location = projectLinks[index];
+      });
+    });
+
+    const projectLinks = {
+      0: "https://github.com/fac18/week2-ajnp-sbs-todolist",
+      1: "https://github.com/fac18/week3-ABEH-trialbytrivia",
+      2: "https://github.com/fac18/week4-ABEH-autocomplete",
+      3: "https://github.com/fac18/week5-famk-backend-api"
+    };
+  }, []);
+
   return (
     <section id="projects">
       <h2>Some Projects I've Worked On</h2>
