@@ -52,6 +52,7 @@ function App() {
         let newStar = document.createElement("img");
         newStar.src = require("./assets/star.svg");
         newStar.classList.add("star");
+        newStar.alt = "";
         newStar.style.top = Math.random() * window.innerHeight + "px";
         newStar.style.left = Math.random() * window.innerWidth + "px";
         section.appendChild(newStar);

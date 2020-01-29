@@ -43,7 +43,7 @@ function Projects() {
             </figcaption>
             <img
               className="project-image"
-              src={require("../assets/week2.png")}
+              src={require("../assets/week2.jpg")}
               alt="my project"
             />
           </figure>
@@ -54,7 +54,7 @@ function Projects() {
             </figcaption>
             <img
               className="project-image"
-              src={require("../assets/week3.png")}
+              src={require("../assets/week3.jpg")}
               alt="my project"
             />
           </figure>
@@ -65,7 +65,7 @@ function Projects() {
             </figcaption>
             <img
               className="project-image"
-              src={require("../assets/week4.png")}
+              src={require("../assets/week4.jpg")}
               alt="my project"
             />
           </figure>
@@ -78,7 +78,7 @@ function Projects() {
             </figcaption>
             <img
               className="project-image"
-              src={require("../assets/week7.png")}
+              src={require("../assets/week7.jpg")}
               alt="my project"
             />
           </figure>
@@ -89,7 +89,7 @@ function Projects() {
             </figcaption>
             <img
               className="project-image"
-              src={require("../assets/week5.png")}
+              src={require("../assets/week5.jpg")}
               alt="my project"
             />
           </figure>
@@ -99,7 +99,7 @@ function Projects() {
             </figcaption>
             <img
               className="project-image"
-              src={require("../assets/week8.png")}
+              src={require("../assets/week8.jpg")}
               alt="my project"
             />
           </figure>
