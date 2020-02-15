@@ -1,219 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Gillian Yeomans</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./public/reset.css" />
     <link rel="stylesheet" href="./public/style.css" />
-    <link rel="stylesheet" href="./public/mediaQueries.css" />
-    <link rel="icon" type="image/png" href="./temp resources/favicon.png" />
     <link
-      href="https://fonts.googleapis.com/css?family=Codystar|Open+Sans&display=swap"
+      href="https://fonts.googleapis.com/css?family=PT+Serif&display=swap"
       rel="stylesheet"
     />
-    <script
-      src="https://kit.fontawesome.com/3e24d91489.js"
-      crossorigin="anonymous"
-    ></script>
+    <title>Document</title>
   </head>
-
   <body>
-    <nav id="rocket-nav">
-      <img src="./temp resources/navline.svg" alt="" id="navline" />
-      <img src="./temp resources/rocket-svgrepo-com 1.svg" alt="" id="rocket" />
-    </nav>
-    <div id="site-container">
-      <img src="./temp resources/satellite-svgrepo-com.svg" class="satellite" />
-      <img src="./temp resources/satellite-svgrepo-com.svg" class="satellite" />
-      <section id="landing">
-        <img
-          src="./temp resources/planet1a.svg"
-          alt=""
-          id="planet1"
-          class="planet"
-        />
-        <img
-          src="./temp resources/planet2.svg"
-          alt=""
-          id="planet2"
-          class="planet"
-        />
-        <img
-          src="./temp resources/planet3.svg"
-          alt=""
-          id="planet3"
-          class="planet"
-        />
-        <img
-          src="./temp resources/planet4.svg"
-          alt=""
-          id="planet4"
-          class="planet"
-        />
-        <h1>
-          Gillian<br />
-          Yeomans
-        </h1>
-      </section>
-      <section id="bio">
-        <div id="bio-header">
-          <h2>Hi there, nice to meet you!</h2>
-          <aside>
-            <p>Bio Length:</p>
-            <label for="bio-radio-short"
-              ><input
-                type="radio"
-                name="bio-length"
-                value="short"
-                id="bio-radio-short"
-              />Short</label
-            >
-            <label for="bio-radio-medium"
-              ><input
-                type="radio"
-                name="bio-length"
-                value="medium"
-                id="bio-radio-medium"
-                checked
-              />Medium</label
-            >
-            <label for="bio-radio-long"
-              ><input
-                type="radio"
-                name="bio-length"
-                value="long"
-                id="bio-radio-long"
-              />Long</label
-            >
-          </aside>
-        </div>
-        <div id="bio-text"></div>
-      </section>
-      <section id="projects">
-        <h2>Some Projects I've Worked On</h2>
-        <div id="project-gallery">
-          <div id="project-gallery-upper" class="project-gallery-row">
-            <figure>
-              <figcaption class="project-description">
-                A to-do list project built using TDD. To-do items can be added,
-                edited, deleted, and marked as done.
-              </figcaption>
-              <img
-                class="project-image"
-                src="./temp resources/week2.png"
-                alt="my project"
-              />
-            </figure>
-            <figure>
-              <figcaption class="project-description">
-                A general knowledge quiz that gives you happy gifs for right
-                answers and insults for wrong ones
-              </figcaption>
-              <img
-                class="project-image"
-                src="./temp resources/week3.png"
-                alt="my project"
-              />
-            </figure>
-            <figure>
-              <figcaption class="project-description">
-                Search our list of footballers and birds with a handy
-                autocomplete, then see its Wikipedia page
-              </figcaption>
-              <img
-                class="project-image"
-                src="./temp resources/week4.png"
-                alt="my project"
-              />
-            </figure>
-          </div>
-          <div id="project-gallery-lower" class="project-gallery-row">
-            <figure>
-              <figcaption class="project-description">
-                A project using databases, user profiles and authentication with
-                a view of being developed into a game
-              </figcaption>
-              <img
-                class="project-image"
-                src="./temp resources/week7.png"
-                alt="my project"
-              />
-            </figure>
-            <figure>
-              <figcaption class="project-description">
-                Check real-time values of popular cryptocurrencies against
-                several major world currencies
-              </figcaption>
-              <img
-                class="project-image"
-                src="./temp resources/week5.png"
-                alt="my project"
-              />
-            </figure>
-            <figure>
-              <figcaption class="project-description">
-                A fun yearbook for cohort 18 of the Founders and Coders course
-              </figcaption>
-              <img
-                class="project-image"
-                src="./temp resources/week8.png"
-                alt="my project"
-              />
-            </figure>
-          </div>
-        </div>
-      </section>
-      <section id="skills">
-        <h3>I have experience with...</h3>
-        <table class="skills-table">
-          <tr class="table-header">
-            <th><i class="fas fa-desktop"></i> Front End</th>
-            <th><i class="fas fa-server"></i> Back End</th>
-            <th><i class="fas fa-database"></i> Databases</th>
-          </tr>
-          <tr>
-            <td>HTML</td>
-            <td>Node.js</td>
-            <td>PostgreSQL</td>
-          </tr>
-          <tr>
-            <td>CSS</td>
-          </tr>
-          <tr>
-            <td>Javascript</td>
-          </tr>
-        </table>
-
-        <table class="skills-table">
-          <tr class="table-header">
-            <th><i class="fas fa-vial"></i> Testing</th>
-            <th><i class="fas fa-tools"></i> Tools</th>
-            <th><i class="fas fa-ruler-combined"></i> Design</th>
-          </tr>
-          <tr>
-            <td>Tape</td>
-            <td>Github</td>
-            <td>Figma</td>
-          </tr>
-          <tr>
-            <td>Codecov</td>
-            <td>Travis</td>
-          </tr>
-          <tr>
-            <td>Supertest</td>
-          </tr>
-        </table>
-      </section>
-      <section id="contact">
-        <h2>Get in touch</h2>
-
-        Form with recaptcha?? Instead of email? Email Github LinkedIn Twitter
-      </section>
-    </div>
-    <script src="./public/main.js"></script>
-    <script src="./public/scrolling.js"></script>
+    <header>
+      <nav>
+        <ol>
+          <li><a class="link" href="/">Home</a></li>
+            <li><a href="/public/aboutme">About Me</a></li>
+          <li><a href="/public/projects">Projects</a></li>
+            <li><a href="/public/experience">Experience</a></li>
+          </a>
+        </ol>
+      </nav>
+    </header>
+    <main>
+      <h1 id="title">Gillian Yeomans</h1>
+      <h3 id="subtitle">Full-stack Software Developer</h3>
+      <span>👩‍💻</span>
+      <p id="intro">
+    Former Risk Analyst, retrained as a Developer.  Love learning new skills and technologies, and
+    putting them to practical use with my business experience.  Based across London and Rome.  Enjoy yoga and
+    crosswords.
+      </p>
+    </main>
+    <!-- <footer>
+      &copy; 2020
+    </footer> -->
   </body>
 </html>
