@@ -45,6 +45,7 @@ ol {
   flex-direction: row;
   list-style: none;
   justify-content: space-around;
+  padding: 0;
 }
 
 nav a {
@@ -54,6 +55,7 @@ nav a {
   letter-spacing: 0.15em;
   padding: var(--space-xs);
   position: relative;
+  font-size: var(--space-md);
 }
 
 nav a:after {
@@ -136,11 +138,13 @@ footer a {
 }
 
 .project-focus-image {
-  max-width: 300px;
+  max-width: 350px;
 }
 
 .project-focus-text {
   padding: 0 var(--space-lg);
+  margin: 0 var(--space-sm);
+  background-color: var(--transparentwhite);
 }
 
 .project-gallery {
@@ -157,6 +161,7 @@ footer a {
 .project img {
   width: 100%;
   opacity: 0.8;
+  padding: var(--space-sm);
 }
 
 /* contact */
