@@ -1,0 +1,59 @@
+.project-focus {
+  display: grid;
+  margin: var(--space-xl) auto;
+  text-align: left;
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+    "project-focus-image"
+    "project-focus-text";
+}
+
+.project-focus-image {
+  max-width: 350px;
+}
+
+.project-focus-text {
+  padding: 0 var(--space-lg);
+  margin: 0 var(--space-sm);
+  background-color: var(--transparentwhite);
+  max-width: 450px;
+}
+
+.project-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: var(--space-lg);
+}
+
+.project {
+  width: 33%;
+}
+
+figure {
+  position: relative;
+  z-index: 2;
+  background-color: white;
+}
+
+.project img {
+  width: 100%;
+  opacity: 0.9;
+  padding: var(--space-sm);
+}
+
+.project img:hover {
+  cursor: pointer;
+}
+
+.project-description {
+  display: none;
+  transition: 0.3s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0%, -40%);
+  text-align: center;
+  padding: 1rem;
+}

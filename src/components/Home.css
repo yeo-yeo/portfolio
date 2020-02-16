@@ -1,0 +1,28 @@
+#main-landing {
+  justify-content: center;
+}
+
+#landing-section {
+  padding: var(--space-xl) 0;
+  background-color: var(--transparentwhite);
+}
+
+#title {
+  font-size: var(--space-xl);
+}
+
+#subtitle {
+  font-size: var(--space-md);
+}
+
+#title,
+#subtitle {
+  padding: var(--space-xxs);
+}
+span {
+  font-size: var(--space-lg);
+}
+
+#intro {
+  padding: var(--space-md) var(--space-xxxxl);
+}

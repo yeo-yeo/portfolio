@@ -1,0 +1,9 @@
+.bio {
+  padding: var(--space-sm) var(--space-xxxxl);
+  text-align: left;
+}
+
+.gillian {
+  max-width: 300px;
+  margin: var(--space-lg) auto;
+}
