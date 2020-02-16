@@ -3,7 +3,7 @@ import imageWeek5 from "../assets/week5.jpg";
 import imageWeek2 from "../assets/week2.jpg";
 import imageWeek7 from "../assets/week7.jpg";
 import imageApplication from "../assets/application.png";
-import imageCalculator from "../assets/calculator.png";
+import imageCalculator from "../assets/calculator.jpg";
 
 const makeProject = (title, imageUrl, githubUrl, text) => {
   return { title, imageUrl, githubUrl, text };

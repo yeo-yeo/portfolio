@@ -7,7 +7,7 @@ const AboutMe = () => {
   const [showLoader, setShowLoader] = React.useState(true);
 
   React.useEffect(() => {
-    setTimeout(() => setShowLoader(false), 400);
+    setTimeout(() => setShowLoader(false), 1000);
   }, []);
 
   return (
