@@ -6,46 +6,53 @@ import Home from "./components/Home";
 import AboutMe from "./components/AboutMe";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import Cats from "./components/Cats";
 
 function App() {
+  const [showCats, setShowCats] = React.useState(false);
+
+  const sequence = [
+    "ArrowUp",
+    "ArrowUp",
+    "ArrowDown",
+    "ArrowDown",
+    "ArrowLeft",
+    "ArrowRight",
+    "ArrowLeft",
+    "ArrowRight",
+    "b",
+    "a"
+  ];
+
+  const currentKey = React.useRef(0);
+
+  const konami = event => {
+    if (event.key === sequence[currentKey.current]) {
+      if (currentKey.current === 9) {
+        setShowCats(true);
+        currentKey.current = 0;
+      } else {
+        currentKey.current++;
+      }
+    } else {
+      setShowCats(false);
+      currentKey.current = 0;
+    }
+  };
+
+  React.useEffect(() => {
+    document.body.addEventListener("keydown", event => konami(event));
+    return document.body.removeEventListener("keydown", event => konami(event));
+  }, []);
+
   return (
     <Router>
-      <Route
-        exact
-        path="/"
-        render={() => (
-          <>
-            <Nav /> <Home />
-          </>
-        )}
-      />
-      <Route
-        exact
-        path="/aboutme"
-        render={() => (
-          <>
-            <Nav /> <AboutMe />
-          </>
-        )}
-      />
-      <Route
-        exact
-        path="/projects"
-        render={() => (
-          <>
-            <Nav /> <Projects />
-          </>
-        )}
-      />
-      <Route
-        exact
-        path="/contact"
-        render={() => (
-          <>
-            <Nav /> <Contact />
-          </>
-        )}
-      />
+      {showCats && <Cats />}
+      <Nav />
+      <Route exact path="/" render={() => <Home />} />
+      <Route exact path="/aboutme" render={() => <AboutMe />} />
+      <Route exact path="/projects" render={() => <Projects />} />
+      <Route exact path="/contact" render={() => <Contact />} />
     </Router>
   );
 }

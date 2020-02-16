@@ -1,3 +1,7 @@
+#loader {
+  margin: auto;
+}
+
 .project-focus {
   display: grid;
   margin: var(--space-xl) auto;
@@ -24,36 +28,4 @@
   flex-wrap: wrap;
   align-items: center;
   margin: var(--space-lg);
-}
-
-.project {
-  width: 33%;
-}
-
-figure {
-  position: relative;
-  z-index: 2;
-  background-color: white;
-}
-
-.project img {
-  width: 100%;
-  opacity: 0.9;
-  padding: var(--space-sm);
-}
-
-.project img:hover {
-  cursor: pointer;
-}
-
-.project-description {
-  display: none;
-  transition: 0.3s ease;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translate(0%, -40%);
-  text-align: center;
-  padding: 1rem;
 }

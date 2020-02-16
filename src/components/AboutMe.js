@@ -7,8 +7,8 @@ const AboutMe = () => {
     <main>
       <img src={headshot} className="gillian" alt="Gillian"></img>
       <p className="bio">
-        I'm Gillian, a recent graduate of the
-        <a href="https://www.foundersandcoders.com/">Founders and Coders</a>
+        I'm Gillian, a recent graduate of the{" "}
+        <a href="https://www.foundersandcoders.com/">Founders and Coders</a>{" "}
         full-stack bootcamp. I'm currently looking for full-stack or back-end
         developer opportunities.
       </p>
@@ -31,6 +31,13 @@ const AboutMe = () => {
         I'm looking forward to honing my development skills in a team
         environment, while bringing my previously developed skills to the table
         too. Hope to see you soon!
+      </p>
+      <p className="bio">
+        You can download my full CV{" "}
+        <a href="./GYeomans_CV.pdf" download>
+          {" "}
+          here
+        </a>
       </p>
     </main>
   );
