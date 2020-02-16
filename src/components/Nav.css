@@ -37,3 +37,15 @@ nav a:hover:after {
   width: 100%;
   left: 0;
 }
+
+@media screen and (max-width: 1000px) {
+  nav li {
+    font-size: var(--space-unit);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  nav li {
+    font-size: var(--space-sm);
+  }
+}

@@ -20,9 +20,46 @@
   padding: var(--space-xxs);
 }
 span {
+  display: inline-block;
   font-size: var(--space-lg);
+}
+
+span:hover {
+  animation: spin 0.5s linear 1;
 }
 
 #intro {
   padding: var(--space-md) var(--space-xxxxl);
+}
+
+footer svg {
+  width: 24px;
+  height: 24px;
+  margin: var(--space-xxxxs);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #intro {
+    padding: var(--space-md) var(--space-xxl);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #title {
+    font-size: var(--space-lg);
+  }
+
+  #intro {
+    padding: var(--space-md) var(--space-lg);
+  }
 }

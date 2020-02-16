@@ -28,7 +28,11 @@
 
 #contact-icon {
   padding: var(--space-md);
-  width: 128px;
+}
+
+#contact-icon svg {
+  width: var(--space-xxl);
+  height: var(--space-xxl);
 }
 
 #contact-icon:nth-of-type(odd) {
@@ -60,5 +64,21 @@
   }
   100% {
     transform: translateY(-2px);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #contact-icons {
+    flex-direction: column;
+  }
+
+  #contact-icon {
+    padding: var(--space-xxs);
+    animation: none !important;
+  }
+
+  #contact-icon svg {
+    width: var(--space-xl);
+    height: var(--space-xl);
   }
 }

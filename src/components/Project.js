@@ -21,7 +21,7 @@ const Project = ({ title, imageUrl, githubUrl, text }) => {
           event.target.previousSibling.style.display = "none";
         }}
         onClick={() => {
-          window.location.replace(githubUrl);
+          window.open(githubUrl, "_blank");
         }}
       ></img>
     </figure>

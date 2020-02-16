@@ -29,3 +29,19 @@
   text-align: center;
   padding: 1rem;
 }
+
+@media screen and (max-width: 1000px) {
+  .project {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .project {
+    width: 100%;
+  }
+
+  .project img {
+    margin: var(--space-sm) 0;
+  }
+}

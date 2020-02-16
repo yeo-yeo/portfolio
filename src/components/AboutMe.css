@@ -1,9 +1,32 @@
-.bio {
-  padding: var(--space-sm) var(--space-xxxxl);
-  text-align: left;
-}
-
 .gillian {
   max-width: 300px;
   margin: var(--space-lg) auto;
+}
+
+.bio {
+  text-align: left;
+  margin: 0 var(--space-xxxxl);
+  margin-bottom: var(--space-lg);
+  background-color: var(--transparentwhite);
+}
+
+.bio p {
+  padding: var(--space-sm);
+}
+
+.bio a {
+  text-decoration: none;
+  color: var(--pink);
+}
+
+@media screen and (max-width: 1000px) {
+  .bio {
+    margin: var(--space-sm) var(--space-xxl);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .bio {
+    margin: var(--space-sm);
+  }
 }

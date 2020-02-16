@@ -3,8 +3,8 @@
   font-style: normal;
   font-weight: 400;
   src: local("Tomorrow"), local("Tomorrow-Regular"),
-    url(./assets/tomorrow-latin-400.woff2) format("woff2"),
-    url(./assets/tomorrow-latin-400.woff) format("woff");
+    url(./assets/fonts/tomorrow-latin-400.woff2) format("woff2"),
+    url(./assets/fonts/tomorrow-latin-400.woff) format("woff");
 }
 
 html {

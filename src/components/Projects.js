@@ -3,8 +3,8 @@ import "./Projects.css";
 import loader from "../assets/loader.svg";
 import projectList from "../assets/projectList";
 import Project from "./Project";
-import imageChatti from "../assets/chatti.png";
-import imageSignpost from "../assets/week12.jpg";
+import imageChatti from "../assets/projects/chatti.png";
+import imageSignpost from "../assets/projects/week12.jpg";
 
 const Projects = () => {
   const [showLoader, setShowLoader] = React.useState(true);

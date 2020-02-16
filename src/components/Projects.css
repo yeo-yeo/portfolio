@@ -29,3 +29,17 @@
   align-items: center;
   margin: var(--space-lg);
 }
+
+@media screen and (max-width: 1000px) {
+}
+
+@media screen and (max-width: 500px) {
+  .project-focus {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .project-focus-image {
+    margin: auto;
+  }
+}

@@ -50,11 +50,11 @@ function App() {
       {showCats && <Cats />}
       <Nav />
       <Switch>
-        <Route exact path="/" render={() => <Home />} />
-        <Route exact path="/aboutme" render={() => <AboutMe />} />
-        <Route exact path="/projects" render={() => <Projects />} />
-        <Route exact path="/contact" render={() => <Contact />} />
-        <Route render={() => <Home />} />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/aboutme" component={AboutMe} />
+        <Route exact path="/projects" component={Projects} />
+        <Route exact path="/contact" component={Contact} />
+        <Route component={Home} />
       </Switch>
     </Router>
   );

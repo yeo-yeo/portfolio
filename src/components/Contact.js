@@ -1,10 +1,20 @@
 import React from "react";
 import "./Contact.css";
-import logoGithub from "../assets/github.svg";
-import logoLinkedIn from "../assets/linkedin.svg";
-import logoTwitter from "../assets/twitter.svg";
+import ContactIcons from "./ContactIcons";
 
 const Contact = () => {
+  const [iconHover, setIconHover] = React.useState([false, false, false]);
+
+  const hoverOn = ref => {
+    const newArray = [false, false, false];
+    newArray[ref] = true;
+    setIconHover(newArray);
+  };
+
+  const hoverOff = () => {
+    setIconHover([false, false, false]);
+  };
+
   return (
     <main id="main-contact">
       <section>
@@ -18,18 +28,45 @@ const Contact = () => {
         <h2>Or find me here:</h2>
         <div id="contact-icons">
           <div id="contact-icon">
-            <a href="https://github.com/yeo-yeo">
-              <img src={logoGithub} alt="github"></img>
+            <a
+              href="https://github.com/yeo-yeo"
+              target="_blank"
+              rel="noopener noreferrer"
+              onMouseEnter={() => hoverOn("0")}
+              onMouseLeave={() => hoverOff("0")}
+            >
+              <ContactIcons
+                name="github"
+                fill={iconHover[0] ? "#c995a2" : "#000000"}
+              />
             </a>
           </div>
           <div id="contact-icon">
-            <a href="https://www.linkedin.com/in/gyeomans/">
-              <img src={logoLinkedIn} alt="linkedin"></img>
+            <a
+              href="https://www.linkedin.com/in/gyeomans/"
+              target="_blank"
+              rel="noopener noreferrer"
+              onMouseEnter={() => hoverOn("1")}
+              onMouseLeave={() => hoverOff()}
+            >
+              <ContactIcons
+                name="linkedin"
+                fill={iconHover[1] ? "#c995a2" : "#000000"}
+              />
             </a>
           </div>
           <div id="contact-icon">
-            <a href="https://twitter.com/yeo_yeo_">
-              <img src={logoTwitter} alt="twitter"></img>
+            <a
+              href="https://twitter.com/yeo_yeo_"
+              target="_blank"
+              rel="noopener noreferrer"
+              onMouseEnter={() => hoverOn("2")}
+              onMouseLeave={() => hoverOff()}
+            >
+              <ContactIcons
+                name="twitter"
+                fill={iconHover[2] ? "#c995a2" : "#000000"}
+              />
             </a>
           </div>
         </div>
