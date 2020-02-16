@@ -4,9 +4,10 @@
 
 Work in progress! 
 
-Things I've learned in the process:
+Things I've learned in the process:\
 React refs\
 Event listener instances\
 Updated state not available in event listener functions\
 Domain management\
+Downloading and installing custom fonts\
 Keeping things simple!
