@@ -10,8 +10,6 @@ const Projects = () => {
   const [showLoader, setShowLoader] = React.useState(true);
   const [otherProjects] = React.useState(projectList);
 
-  console.log(showLoader);
-
   React.useEffect(() => {
     setTimeout(() => setShowLoader(false), 800);
   }, []);
