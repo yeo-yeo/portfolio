@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css?family=Tomorrow&display=swap");
-
 :root {
   --space-unit: 1em;
   --space-xxxxs: calc(0.125 * var(--space-unit));
