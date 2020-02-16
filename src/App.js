@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 import Nav from "./components/Nav";
 import Home from "./components/Home";
@@ -49,10 +49,13 @@ function App() {
     <Router>
       {showCats && <Cats />}
       <Nav />
-      <Route exact path="/" render={() => <Home />} />
-      <Route exact path="/aboutme" render={() => <AboutMe />} />
-      <Route exact path="/projects" render={() => <Projects />} />
-      <Route exact path="/contact" render={() => <Contact />} />
+      <Switch>
+        <Route exact path="/" render={() => <Home />} />
+        <Route exact path="/aboutme" render={() => <AboutMe />} />
+        <Route exact path="/projects" render={() => <Projects />} />
+        <Route exact path="/contact" render={() => <Contact />} />
+        <Route render={() => <Home />} />
+      </Switch>
     </Router>
   );
 }
