@@ -11,7 +11,7 @@ ol {
   padding: 0;
 }
 
-nav a {
+nav li {
   color: var(--charcoal);
   text-decoration: none;
   text-transform: uppercase;

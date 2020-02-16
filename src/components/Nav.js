@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Nav.css";
 
 const Nav = () => {
@@ -7,16 +8,33 @@ const Nav = () => {
       <nav>
         <ol>
           <li>
-            <a href="/">Home</a>
+            <Link to="/" style={{ textDecoration: "none", color: "#202020" }}>
+              Home
+            </Link>
           </li>
           <li>
-            <a href="/aboutme">About Me</a>
+            <Link
+              to="/aboutme"
+              style={{ textDecoration: "none", color: "#202020" }}
+            >
+              About Me
+            </Link>
           </li>
           <li>
-            <a href="/projects">Projects</a>
+            <Link
+              to="/projects"
+              style={{ textDecoration: "none", color: "#202020" }}
+            >
+              Projects
+            </Link>
           </li>
           <li>
-            <a href="/contact">Contact</a>
+            <Link
+              to="/contact"
+              style={{ textDecoration: "none", color: "#202020" }}
+            >
+              Contact
+            </Link>
           </li>
         </ol>
       </nav>
