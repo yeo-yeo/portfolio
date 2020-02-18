@@ -43,7 +43,7 @@ function App() {
   React.useEffect(() => {
     document.body.addEventListener("keydown", event => konami(event));
     return document.body.removeEventListener("keydown", event => konami(event));
-  }, []);
+  });
 
   return (
     <Router>

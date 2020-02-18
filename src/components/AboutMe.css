@@ -1,6 +1,19 @@
+#loader {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#about-me-main {
+  visibility: hidden;
+  animation: fadein 0.5s;
+}
+
 .gillian {
   max-width: 300px;
   margin: var(--space-lg) auto;
+  animation: fadein 0.5s;
 }
 
 .bio {
@@ -8,6 +21,7 @@
   margin: 0 var(--space-xxxxl);
   margin-bottom: var(--space-lg);
   background-color: var(--transparentwhite);
+  animation: fadein 0.5s;
 }
 
 .bio p {
@@ -17,6 +31,15 @@
 .bio a {
   text-decoration: none;
   color: var(--pink);
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @media screen and (max-width: 1000px) {
