@@ -1,5 +1,13 @@
 #loader {
-  margin: auto;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#projects-main {
+  visibility: hidden;
+  animation: fadein 0.5s;
 }
 
 .project-focus {
@@ -28,6 +36,15 @@
   flex-wrap: wrap;
   align-items: center;
   margin: var(--space-lg);
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @media screen and (max-width: 1000px) {

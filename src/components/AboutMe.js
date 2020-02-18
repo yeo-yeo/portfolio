@@ -20,7 +20,6 @@ const AboutMe = () => {
           onLoad={() => {
             setImageLoaded(true);
           }}
-          // style={{ visibility: imageLoaded ? "visible" : "hidden" }}
         ></img>
         <div className="bio">
           <p>
