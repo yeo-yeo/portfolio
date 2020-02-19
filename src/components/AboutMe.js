@@ -40,7 +40,7 @@ const AboutMe = () => {
             I have a First class degree from the University of Edinburgh in
             English Literature and Latin. While it might not be the 100%
             traditional background for a developer, I think the literary and
-            linguistic analsysis, and rigorous application of grammar and syntax
+            linguistic analysis, and rigorous application of grammar and syntax
             in Latin are actually a perfect preparation for programming.
           </p>
           <p>

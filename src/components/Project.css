@@ -17,7 +17,6 @@
 
 .project-description {
   position: relative;
-  z-index: 2;
   display: none;
   transition: 0.3s ease;
   opacity: 0;
