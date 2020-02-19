@@ -27,6 +27,7 @@ function App() {
   const currentKey = React.useRef(0);
 
   const konami = event => {
+    console.log(currentKey.current);
     if (event.key === sequence[currentKey.current]) {
       if (currentKey.current === 9) {
         setShowCats(true);
@@ -41,8 +42,8 @@ function App() {
   };
 
   React.useEffect(() => {
-    document.body.addEventListener("keydown", event => konami(event));
-    return document.body.removeEventListener("keydown", event => konami(event));
+    window.addEventListener("keydown", konami);
+    return () => window.removeEventListener("keydown", konami);
   });
 
   return (
