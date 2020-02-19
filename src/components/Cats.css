@@ -2,6 +2,7 @@
   position: fixed;
   transform: translateY(-120px);
   animation: fall 5s linear infinite;
+  z-index: 99;
 }
 
 .cat {
