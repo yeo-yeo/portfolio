@@ -1,5 +1,7 @@
 #main-contact {
   justify-content: center;
+  visibility: hidden;
+  animation: fadein 0.5s;
 }
 
 #main-contact section {
@@ -8,6 +10,10 @@
   flex-direction: column;
   justify-content: center;
   padding: var(--space-lg);
+}
+
+#main-contact span {
+  padding: var(--space-xs);
 }
 
 #main-contact h1,
@@ -41,6 +47,15 @@
 
 #contact-icon:nth-of-type(even) {
   animation: bob2 3s linear infinite;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes bob {

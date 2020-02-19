@@ -9,27 +9,6 @@
   animation: rotate 2s linear infinite;
 }
 
-#disagio1 {
-  left: 10vw;
-  animation-delay: 2s;
-  animation-duration: 4s;
-}
-
-#accollo1 {
-  left: 30vw;
-  animation-delay: 1s;
-}
-
-#disagio2 {
-  left: 60vw;
-  animation-duration: 6s;
-}
-
-#accollo2 {
-  left: 80vw;
-  animation-delay: 3s;
-}
-
 @keyframes fall {
   0% {
     transform: translateY(-120px);

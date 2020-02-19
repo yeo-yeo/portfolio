@@ -22,10 +22,14 @@ const Projects = () => {
           visibility: image1Loaded && image2Loaded ? "visible" : "hidden"
         }}
       >
-        <div className="project-focus">
-          <a href="https://github.com/fac18/chatti">
+        <h2 id="first-header">Main projects:</h2>
+        <div id="bigger-projects">
+          <a
+            href="https://github.com/fac18/chatti"
+            id="chatti-image"
+            className="project-focus-image"
+          >
             <img
-              className="project-focus-image"
               src={imageChatti}
               alt="Chatti app screenshot"
               onLoad={() => {
@@ -33,22 +37,31 @@ const Projects = () => {
               }}
             ></img>
           </a>
-          <div className="project-focus-text">
+          <div className="project-focus-text" id="chatti-text">
             <h3>Chatti</h3>
             <h4>DevOps lead / developer</h4>
             <h5>React, Express, PostgreSQL, JWT</h5>
-            <p>
-              About the project blah blah blah. About the project blah blah
-              blah. About the project blah blah blah. About the project blah
-              blah blah. About the project blah blah blah. About the project
-              blah blah blah.
-            </p>
+            <ul>
+              <li>
+                An app for parents delivering activities aimed at meeting small
+                children's development goals
+              </li>
+              <li>
+                I took the lead on setting up the front end, back end and
+                database, deploying to Heroku and managing authentication
+              </li>
+              <li>
+                I also assisted with workflow organisation and communicating
+                with the Product Owner
+              </li>
+            </ul>
           </div>
-        </div>
-        <div className="project-focus">
-          <a href="https://github.com/fac18/signpost">
+          <a
+            href="https://github.com/fac18/signpost"
+            id="signpost-image"
+            className="project-focus-image"
+          >
             <img
-              className="project-focus-image"
               src={imageSignpost}
               alt="Signpost app screenshot"
               onLoad={() => {
@@ -56,16 +69,23 @@ const Projects = () => {
               }}
             ></img>
           </a>
-          <div className="project-focus-text">
+          <div className="project-focus-text" id="signpost-text">
             <h3>Signpost</h3>
             <h4>QA lead / developer</h4>
             <h5>React, Express, Airtable, Google Maps, Google Geocoding</h5>
-            <p>
-              About the project blah blah blah. About the project blah blah
-              blah. About the project blah blah blah. About the project blah
-              blah blah. About the project blah blah blah. About the project
-              blah blah blah.
-            </p>
+            <ul>
+              <li>
+                An app showing services for people at risk of homelessness
+              </li>
+              <li>
+                My particular area of responsibility was testing and maintaining
+                high standards of code
+              </li>
+              <li>
+                I also led the implementation and custom configurations of the
+                Google APIs
+              </li>
+            </ul>
           </div>
         </div>
         <h2>Other projects:</h2>

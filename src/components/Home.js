@@ -3,15 +3,36 @@ import "./Home.css";
 import ContactIcons from "./ContactIcons";
 
 const Home = () => {
+  const [rendered, setRendered] = React.useState(false);
+
+  React.useEffect(() => {
+    setRendered(true);
+  }, []);
+
+  const [animatedEmoji, setAnimatedEmoji] = React.useState(false);
+
   return (
     <>
-      <main id="main-landing">
+      <main
+        id="main-landing"
+        style={{ visibility: rendered ? "visible" : "hidden" }}
+      >
         <section id="landing-section">
           <h1 id="title">Gillian Yeomans</h1>
           <h3 id="subtitle">Full-stack Software Developer</h3>
-          <span role="img" aria-label="female coder emoji">
-            👩‍💻
-          </span>
+          <div
+            id="emoji-container"
+            onMouseEnter={() => setAnimatedEmoji(true)}
+            onAnimationEnd={() => setAnimatedEmoji(false)}
+          >
+            <span
+              role="img"
+              aria-label="female coder emoji"
+              className={animatedEmoji ? "animated" : ""}
+            >
+              👩‍💻
+            </span>
+          </div>
           <p id="intro">
             Former Risk Analyst, retrained as a Developer. Love learning new
             skills and technologies, and putting them to practical use with my

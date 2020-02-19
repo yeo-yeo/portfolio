@@ -1,5 +1,7 @@
 #main-landing {
   justify-content: center;
+  visibility: hidden;
+  animation: fadein 0.5s;
 }
 
 #landing-section {
@@ -19,12 +21,17 @@
 #subtitle {
   padding: var(--space-xxs);
 }
+
+#emoji-container {
+  display: inline-block;
+}
+
 span {
   display: inline-block;
   font-size: var(--space-lg);
 }
 
-span:hover {
+.animated {
   animation: spin 0.5s linear 1;
 }
 

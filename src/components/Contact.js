@@ -3,6 +3,12 @@ import "./Contact.css";
 import ContactIcons from "./ContactIcons";
 
 const Contact = () => {
+  const [rendered, setRendered] = React.useState(false);
+
+  React.useEffect(() => {
+    setRendered(true);
+  }, []);
+
   const [iconHover, setIconHover] = React.useState([false, false, false]);
 
   const hoverOn = ref => {
@@ -16,8 +22,12 @@ const Contact = () => {
   };
 
   return (
-    <main id="main-contact">
+    <main
+      id="main-contact"
+      style={{ visibility: rendered ? "visible" : "hidden" }}
+    >
       <section>
+        <span></span>
         <h1>I'd love to hear from you!</h1>
         <div id="email-contact">
           <h2>Drop me a line:</h2>
