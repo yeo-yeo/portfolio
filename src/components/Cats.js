@@ -26,7 +26,7 @@ const Cats = () => {
             key={index}
             style={{
               left: `${16 * index + 5}vw`,
-              animationDelay: `${Math.random() * 4}s`,
+              animationDelay: `${Math.random() * 3}s`,
               animationDuration: `${Math.random() * (6 - 3) + 3}s`
             }}
           >
