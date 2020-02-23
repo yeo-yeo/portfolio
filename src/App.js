@@ -27,7 +27,6 @@ function App() {
   const currentKey = React.useRef(0);
 
   const konami = event => {
-    console.log(currentKey.current);
     if (event.key === sequence[currentKey.current]) {
       if (currentKey.current === 9) {
         setShowCats(true);
