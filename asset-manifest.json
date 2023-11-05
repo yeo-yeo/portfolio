@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.bd10e1cf.chunk.css",
+    "main.js": "/portfolio/static/js/main.31e0ed4d.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.31e0ed4d.chunk.js.map",
+    "runtime-main.js": "/portfolio/static/js/runtime-main.44087e9b.js",
+    "runtime-main.js.map": "/portfolio/static/js/runtime-main.44087e9b.js.map",
+    "static/js/2.6106c68c.chunk.js": "/portfolio/static/js/2.6106c68c.chunk.js",
+    "static/js/2.6106c68c.chunk.js.map": "/portfolio/static/js/2.6106c68c.chunk.js.map",
+    "index.html": "/portfolio/index.html",
+    "precache-manifest.259e4ba4db7862c7af7f8c0eef4f60ad.js": "/portfolio/precache-manifest.259e4ba4db7862c7af7f8c0eef4f60ad.js",
+    "service-worker.js": "/portfolio/service-worker.js",
+    "static/css/main.bd10e1cf.chunk.css.map": "/portfolio/static/css/main.bd10e1cf.chunk.css.map",
+    "static/js/2.6106c68c.chunk.js.LICENSE.txt": "/portfolio/static/js/2.6106c68c.chunk.js.LICENSE.txt",
+    "static/media/accollo1.png": "/portfolio/static/media/accollo1.ac412d00.png",
+    "static/media/accollo2.png": "/portfolio/static/media/accollo2.599bb363.png",
+    "static/media/accollo3.png": "/portfolio/static/media/accollo3.ab3f3676.png",
+    "static/media/application.png": "/portfolio/static/media/application.0ef3eb7d.png",
+    "static/media/calculator.jpg": "/portfolio/static/media/calculator.dc0e7bc2.jpg",
+    "static/media/chatti.png": "/portfolio/static/media/chatti.1764850d.png",
+    "static/media/disagio1.png": "/portfolio/static/media/disagio1.76785c24.png",
+    "static/media/disagio2.png": "/portfolio/static/media/disagio2.ecf4e855.png",
+    "static/media/disagio3.png": "/portfolio/static/media/disagio3.db7d7929.png",
+    "static/media/headshot.jpg": "/portfolio/static/media/headshot.113cd60f.jpg",
+    "static/media/loader.svg": "/portfolio/static/media/loader.27af7f09.svg",
+    "static/media/App.css": "/portfolio/static/media/tomorrow-latin-400.e3a92679.woff",
+    "static/media/week12.jpg": "/portfolio/static/media/week12.8b3a7e7f.jpg",
+    "static/media/week2.jpg": "/portfolio/static/media/week2.add3f868.jpg",
+    "static/media/week5.jpg": "/portfolio/static/media/week5.2eec4ac8.jpg",
+    "static/media/week7.jpg": "/portfolio/static/media/week7.da651ee8.jpg",
+    "static/media/week8.jpg": "/portfolio/static/media/week8.39ce44a9.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.44087e9b.js",
+    "static/js/2.6106c68c.chunk.js",
+    "static/css/main.bd10e1cf.chunk.css",
+    "static/js/main.31e0ed4d.chunk.js"
+  ]
+}
